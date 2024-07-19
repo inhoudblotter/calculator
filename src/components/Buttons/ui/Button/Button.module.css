@@ -1,0 +1,73 @@
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  font: var(--font-buttons);
+  line-height: 1;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background-color: var(--color-white);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.primary::before {
+  opacity: 0;
+}
+
+.secondary {
+  color: var(--color-blue);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.primary:focus-visible::before {
+  opacity: 0.12;
+}
+
+.secondary:focus-visible::before {
+  opacity: 0.7;
+}
+
+@media (hover: hover) {
+  .primary:hover::before {
+    opacity: 0.05;
+  }
+
+  .secondary:hover::before {
+    opacity: 0.5;
+  }
+}
+
+.primary:active::before {
+  opacity: 0.12;
+}
+
+.secondary:active::before {
+  opacity: 0.8;
+}
+
+@media (max-width: 475px) {
+  .btn {
+    width: 40px;
+    height: 40px;
+  }
+}

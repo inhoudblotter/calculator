@@ -1,0 +1,9 @@
+@import url("./normalize.css");
+@import url("./fonts.css");
+@import url("./variables.css");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}

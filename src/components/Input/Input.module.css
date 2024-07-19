@@ -1,0 +1,13 @@
+.input {
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  font: var(--font-equation);
+  color: var(--color-text);
+  text-align: right;
+  resize: none;
+}
+
+.input:focus {
+  outline: none;
+}

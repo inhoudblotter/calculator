@@ -1,0 +1,22 @@
+.container {
+  display: block;
+  width: 100%;
+  min-height: 76px;
+  font: var(--font-result);
+  color: var(--color-text);
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+}
+
+.error {
+  font-size: 24px;
+  color: var(--color-error);
+}
+
+@media (max-width: 475px) {
+  .container {
+    min-height: 24px;
+  }
+}
